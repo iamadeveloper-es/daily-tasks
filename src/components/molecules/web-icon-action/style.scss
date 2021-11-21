@@ -1,0 +1,14 @@
+.web-icon-action{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: var(--regular-radius);
+    color: #8f8f8f;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: #dadada;
+        color: #727272;
+    }
+}

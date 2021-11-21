@@ -16,6 +16,21 @@ body{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+.flex-content{
+    display: flex;
+    &.flex-row{
+        flex-direction: row;
+    }
+    &.justify-between{
+        justify-content: space-between;
+    }
+    &.align-center{
+        align-items: center;
+    }
+}
+.mb-5{
+    margin-bottom: 5px;
+}
 
 //mediaQueris
 @media screen and(min-width: 478px){

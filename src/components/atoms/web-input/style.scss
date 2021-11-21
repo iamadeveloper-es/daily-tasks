@@ -1,0 +1,11 @@
+.web-input{
+    width: 100%;
+    min-height: 40px;
+    padding-left: 10px;
+    background-color: var(--text-color);
+    border-radius: var(--regular-radius);
+    border: none;
+    :focus-visible{
+        border: 1px solid #d7d4d4;
+    }
+}

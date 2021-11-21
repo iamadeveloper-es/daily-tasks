@@ -1,0 +1,14 @@
+<div class="web-modal"
+v-if="isModalOpen"
+>
+    <div class="web-modal__content">
+        <div class="web-modal__button"
+        @click="closeModal($event)"
+        >
+            <span class="material-icons">
+            highlight_off
+            </span>
+        </div>
+        <slot></slot>
+    </div>
+</div>

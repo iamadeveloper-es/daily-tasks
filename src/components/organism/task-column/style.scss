@@ -3,9 +3,15 @@
     padding: 10px;
     background-color: #ececec;
     color: var(--bg-color);
-    border-radius: 5px;
+    border-radius: var(--regular-radius);
 }
 .task-column__title{
     @include fontBold;
     padding: 10px;
+}
+.actions{
+    .web-icon-action{
+        width: auto;
+        padding: 0;
+    }
 }

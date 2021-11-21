@@ -2,11 +2,12 @@
     <div class="container">
         <div class="grid grid-4">
             <div class="drop-zone"
-            v-for="column in boardData"
-            :keys="column.column.id"
+            v-for="(column, index) in boardData"
+            :keys="index"
             >
                 <task-column
                 :column="column.column"
+                :index="index"
                 ></task-column>
             </div>
         </div>

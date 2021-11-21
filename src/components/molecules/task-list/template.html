@@ -1,3 +1,27 @@
 <div class="task-list">
-    <div class="task-list__name">{{task.name}}</div>
+    <div class="task-list__name"
+    @click="showModal"
+    >{{task.name}}</div>
+    <web-modal
+    :isOpen="isModal"
+    @CloseModal="hideModal($event)"
+    >
+        <div class="modal-task-inner">
+            <div class="modal-header">
+                <div class="modal-header__name">
+                    <web-input
+                    :type="'text'"
+                    :placeHolder="'... New name'"
+                    :value="task.name"
+                    @EmitValue="getInputValue($event)"
+                    ></web-input>
+                </div>
+                <div class="modal-header__name">
+                    {{task.id}}
+                </div>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </web-modal>
 </div>

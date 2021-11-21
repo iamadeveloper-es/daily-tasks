@@ -1,0 +1,20 @@
+.web-modal{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(104, 104, 104, .7);
+}
+.web-modal__content{
+    padding: 15px;
+    width: 80%;
+    min-height: 500px;
+    background-color: var(--text-color);
+}
+.web-modal__button{
+    cursor: pointer;
+}
