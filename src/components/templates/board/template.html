@@ -10,6 +10,13 @@
                 :index="index"
                 ></task-column>
             </div>
+            <web-add
+            :iconData="iconData"
+            :inputData="inputData"
+            :btnData="btnData"
+            @InputValue="handleValue($event)"
+            @AddAction="addNewList($event)"
+            ></web-add>
         </div>
     </div>
 </div>

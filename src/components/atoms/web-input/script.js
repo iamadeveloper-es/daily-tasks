@@ -8,6 +8,9 @@ export default{
     methods:{
         emitValue(ev){
             this.$emit('EmitValue', ev)
+        },
+        cleanValue(ev){
+            ev.target.value = ''
         }
     }
 }

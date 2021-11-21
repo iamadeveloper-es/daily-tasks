@@ -1,0 +1,16 @@
+<div class="web-add">
+    <web-icon-action
+    v-show="!isAdd"
+    v-click-outside="hideAdd"
+    :icon="iconData.icon"
+    :actionText="iconData.text"
+    @Clicked="showAdd($event)"
+    ></web-icon-action>
+    <div class="actions" v-show="isAdd">
+        <web-input class="mb-5" :type="inputData.type" :placeHolder="inputData.placeHolder" :value="inputData.value" @EmitValue="handleValue($event)"></web-input>
+        <div class="flex-content flex-row align-center justify-between">
+            <web-button :btnText="btnData.text" :btnClasses="btnData.classes" @Clicked="addAction($event)"></web-button>
+            <web-icon-action :icon="'highlight_off'" @Clicked="hideAdd($event)"></web-icon-action>
+        </div>
+    </div>
+</div>
