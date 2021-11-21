@@ -1,0 +1,11 @@
+.task-column{
+    width: 100%;
+    padding: 10px;
+    background-color: #ececec;
+    color: var(--bg-color);
+    border-radius: 5px;
+}
+.task-column__title{
+    @include fontBold;
+    padding: 10px;
+}

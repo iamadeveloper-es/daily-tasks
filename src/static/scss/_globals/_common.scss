@@ -5,3 +5,39 @@ body{
     color: var(--text-color);
     @include fontRegular;
 }
+.container{
+    width: 95%;
+    @include marginAuto;
+}
+.grid{
+    display: grid;
+    gap: 10px;
+    &.grid-4{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+//mediaQueris
+@media screen and(min-width: 478px){
+    .grid{
+        &.grid-4{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and(min-width: 758px){
+    .grid{
+        &.grid-4{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and(min-width: 900px){
+    .grid{
+        &.grid-4{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

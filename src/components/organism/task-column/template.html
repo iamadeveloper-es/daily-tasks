@@ -1,0 +1,8 @@
+<div class="task-column">
+    <div class="task-column__title">{{column.title}}</div>
+    <task-list
+    v-for="task in column.tasks"
+    :keys="task.id"
+    :task="task"
+    ></task-list>
+</div>
