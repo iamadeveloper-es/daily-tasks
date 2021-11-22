@@ -5,34 +5,12 @@
     :keys="task.id"
     :task="task"
     ></task-list>
-    <div class="task-list__add">
-        <web-icon-action
-        v-show="!isAddTask"
-        v-click-outside="hideAddTask"
-        :icon="'add'"
-        :actionText="'Add a card'"
-        @Clicked="showAddTask($event)"
-        ></web-icon-action>
-        <div class="actions"
-        v-show="isAddTask"
-        >
-            <web-input
-            class="mb-5"
-            :type="'text'"
-            :placeHolder="'... New task'"
-            @EmitValue="addTask($event)"
-            ></web-input>
-            <div class="flex-content flex-row align-center justify-between">
-                <web-button
-                :btnText="'Add task'"
-                :btnClasses="['btn-sm','btn-blue']"
-                @Clicked="addNewTask()"
-                ></web-button>
-                <web-icon-action
-                :icon="'highlight_off'"
-                @Clicked="hideAddTask($event)"
-                ></web-icon-action>
-            </div>
-        </div>
-    </div>
+    
+    <web-add
+    :iconData="iconData"
+    :inputData="inputData"
+    :btnData="btnData"
+    @InputValue="handleValue($event)"
+    @AddAction="addNewTask($event)"
+    ></web-add>
 </div>

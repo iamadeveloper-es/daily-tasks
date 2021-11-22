@@ -35,6 +35,7 @@ export default{
         },
         addAction(ev){
             this.$emit('AddAction', ev)
+            this.isAdd = false
         }
     }
 }

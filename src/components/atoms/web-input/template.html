@@ -1,6 +1,7 @@
 <input class="web-input" 
+ref="webinput"
 :type="type"
 :placeholder="placeHolder"
 :value="value"
-@input.keyup="emitValue"
+@input="emitValue"
 >

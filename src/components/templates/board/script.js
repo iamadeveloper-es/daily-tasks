@@ -36,6 +36,7 @@ export default{
         },
         handleValue(ev){
             this.inptValue = ev.target.value
+            
         },
         addNewList(){
             if(this.inptValue != ''){
@@ -47,14 +48,12 @@ export default{
                     }
                 }
                 this.$store.commit('ADD_LIST', payload)
-                this.inptValue = ''
+                this.inputData.value = ''
             }
+            this.inputData.value = ''
         }
     },
     computed:{
-        ...mapState(['board']),
-        getInputValue(){
-            return this.inptValue
-        }
+        ...mapState(['board'])
     }
 }

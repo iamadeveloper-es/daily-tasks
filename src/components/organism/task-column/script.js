@@ -1,5 +1,6 @@
 import { randomId } from "../../../utils"
 import TaskList from "@/components/molecules/task-list"
+import WebAdd from "@/components/organism/web-add"
 import WebInput from "@/components/atoms/web-input"
 import WebIconAction from "@/components/molecules/web-icon-action"
 import ClickOutside from 'vue-click-outside'
@@ -7,6 +8,7 @@ export default{
     name: 'task-column',
     components:{
         TaskList,
+        WebAdd,
         WebInput,
         WebIconAction
     },
@@ -17,20 +19,24 @@ export default{
     data(){
         return{
             isAddTask: false,
-            newTask: ''
+            newTask: '',
+            iconData: {
+                icon: 'add',
+                text: 'Add a card'
+            },
+            inputData: {
+                type: 'text',
+                placeHolder: '... New card name',
+                value: ''
+            },
+            btnData: {
+                text: 'Add card',
+                classes: ['btn-sm','btn-blue']
+            }
         }
     },
     methods:{
-        showAddTask(){
-            this.isAddTask = true
-        },
-        hideAddTask(ev){
-            console.log(ev.target.className)
-            if(!ev.target.classList.contains('web-button') && !ev.target.classList.contains('web-input')){
-                this.isAddTask = false
-            }
-        },
-        addTask(ev){
+        handleValue(ev){
             this.newTask = ev.target.value
         },
         addNewTask(){
